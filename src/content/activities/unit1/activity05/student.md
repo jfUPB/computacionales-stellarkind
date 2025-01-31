@@ -1,6 +1,7 @@
 ## Solución a la quinta actividad  
 ### Tabla que documenta el ciclo Fetch-Decode-Execute:
-```
+
+
 | #  | PC | Instrucción | Decodificación  | Ejecuta                         | Cambios           |
 |----|----|-------------|-----------------|---------------------------------|-------------------|
 | 1  | 0  | @60         | A = 60          | Carga 60 en el registro A       | A = 60            |
@@ -12,4 +13,3 @@
 | 7  | 6  | @0          | A = 0           | Carga 0 en el registro A        | A = 0             |
 | 8  | 7  | 0;JMP       | PC = A          | Salta a la dirección 0          | PC = 0            |
 
-```
