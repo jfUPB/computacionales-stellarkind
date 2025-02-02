@@ -24,7 +24,7 @@ M=1
 0;JMP
 ```
 ##### Captura de pantalla del simulador mostrando el estado final de los registros y la memoria:  
-![image](https://github.com/user-attachments/assets/9cca3679-0821-4833-92c7-d7aa673bbe2c)
+![image](../../../../assets/u1-a8-i1.png)  
 -> [Link a imagen en drive - backup](https://drive.google.com/file/d/1OCgTbIvEimf6RQDrbVgMkFnYb58i_1LF/view?usp=drive_link)
 #### - Caso 2) Cuando el valor en la dirección 5 es mayor o igual a 10:  
 ```
@@ -50,5 +50,5 @@ M=1
 0;JMP
 ```
 ##### Captura de pantalla del simulador mostrando el estado final de los registros y la memoria:  
-![image](https://github.com/user-attachments/assets/e16b9dbf-9c18-478d-b709-880f6e5656bb)
+![image](../../../../assets/u1-a8-i2.png)  
 -> [Link a imagen en drive - backup](https://drive.google.com/file/d/1iDHLiKjCvYq4u6stxhZQ3r4DT67nMYKT/view?usp=drive_link)
