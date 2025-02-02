@@ -12,14 +12,21 @@ D=M Carga en D el valor almacenado en la memoria
 Son direcciones almacenadas en memoria que permiten referenciar indirectamente otras ubicaciones.
 #### Ahora, un ejemplo:  
 ```
-@100    // Carga la dirección 100 en A
-D=A     // Guarda 100 en D
-@10     // Carga la dirección 10 en A
-M=D     // Guarda el valor 100 en la dirección 10 (puntero en Mem[10])
+@100
+D=A     
+@10
+M=D
 
-@10     // Carga la dirección 10 en A (donde está almacenado el puntero)
-D=M     // Carga en D el valor de Mem[10] (que es 100)
-@D      // Carga la dirección almacenada en D (100) en A
-M=42    // Guarda el valor 42 en la dirección de memoria 100
+@42
+D=A
+@10
+A=M
+M=D
+
+@10     
+A=M
+D=M
+@11     
+M=D
 ```
 En el ejemplo, después de la ejecución, la dirección 100 en memoria contendrá 42.
