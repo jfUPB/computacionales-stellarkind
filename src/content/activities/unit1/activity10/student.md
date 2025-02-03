@@ -10,3 +10,5 @@ M=1
 @END
 0;JMP
 ```
+### Captura de pantalla del simulador: 
+![image](../../../../assets/u1-a10-i1.png)  
