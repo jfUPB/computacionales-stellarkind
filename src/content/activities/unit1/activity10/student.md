@@ -1,4 +1,4 @@
-## Solucion a la novena actividad  
+## Solucion a la decima actividad  
 ### Programa que dibuje un punto enla esquina superior izquierda de la pantalla
 Código asm
 ```
