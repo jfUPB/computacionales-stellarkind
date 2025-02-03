@@ -1,5 +1,5 @@
 ## Solucion a la onceava actividad  
-### Programa que dibuje un punto enla esquina superior izquierda de la pantalla
+### Programa que dibuje una linea horizontal en la esquina superior izquierda de la pantalla
 Código asm
 ```
 @SCREEN
