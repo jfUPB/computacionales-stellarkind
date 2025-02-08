@@ -3,8 +3,6 @@
 Código asm
 ``` asm
 @SCREEN
-D=A
-A=D
 M=-1
 (END)
 @END
