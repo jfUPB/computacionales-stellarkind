@@ -35,3 +35,9 @@ D=A
 @3
 0;JMP
 ```
+### Video
+<video width="640" height="360" controls>
+  <source src="src/assets/sc-u1-a12-v1.mp4" type="video/mp4">
+  Tu navegador no soporta el elemento de video.
+</video>
+
