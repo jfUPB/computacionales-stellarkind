@@ -9,4 +9,4 @@ M=-1
 0;JMP
 ```
 ### Captura de pantalla del simulador: 
-![image](../../../../assets/u1-a11-i1.png)  
+![image](../../../../assets/u1-a11-i2.png)  
