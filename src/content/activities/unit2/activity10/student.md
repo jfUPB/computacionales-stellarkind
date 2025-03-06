@@ -1,5 +1,5 @@
 ## Solución a la decima actividad
-``` Python
+``` asm
 (LOOP)
     @KBD
     D=M
