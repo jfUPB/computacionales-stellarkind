@@ -1,17 +1,17 @@
 ## Solución a la decima actividad
 ``` asm
+@SCREEN
+   D=A
+   @posActual
+   M=D
 (LOOP)
     @KBD
-    D=M
-    @R13
-    M=D
-    @24576
     D=M
     @112
     D=D-A
     @pinta_pantalla
     D;JEQ
-    @R13
+    @KBD
     D=M
     @98
     D=D-A
@@ -20,30 +20,31 @@
     @LOOP
     0;JMP
 (pinta_pantalla)
-    @SCREEN
-    D=A
-    @16384
-    (PINTA_LOOP)
-        A=D
-        M=-1
-        @24575
-        D=A+1
-        @PINTA_LOOP
-        D;JLE
-    @LOOP
-    0;JMP
-
+   @24576
+   D=A
+   @posActual
+   D=D-M
+   @LOOP
+   D;JEQ
+   @posActual
+   A=M
+   M=-1
+   @posActual
+   M=M+1
+   @LOOP
+   0;JMP
 (borra_pantalla)
-    @SCREEN
-    D=A
-    @16384
-    (BORRA_LOOP)
-        A=D
-        M=0
-        @24575
-        D=A+1
-        @BORRA_LOOP
-        D;JLE
-    @LOOP
-    0;JMP
+   @16383
+   D=A
+   @posActual
+   D=D-M
+   @LOOP
+   D;JEQ
+   @posActual
+   A=M
+   M=0
+   @posActual
+   M=M-1
+   @LOOP
+   0;JMP
 ```
