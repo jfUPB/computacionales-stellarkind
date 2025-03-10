@@ -1,0 +1,50 @@
+## Solución a la decima actividad
+``` asm
+@SCREEN
+   D=A
+   @posActual
+   M=D
+(LOOP)
+    @KBD
+    D=M
+    @112
+    D=D-A
+    @pinta_pantalla
+    D;JEQ
+    @KBD
+    D=M
+    @98
+    D=D-A
+    @borra_pantalla
+    D;JEQ
+    @LOOP
+    0;JMP
+(pinta_pantalla)
+   @24576
+   D=A
+   @posActual
+   D=D-M
+   @LOOP
+   D;JEQ
+   @posActual
+   A=M
+   M=-1
+   @posActual
+   M=M+1
+   @LOOP
+   0;JMP
+(borra_pantalla)
+   @16383
+   D=A
+   @posActual
+   D=D-M
+   @LOOP
+   D;JEQ
+   @posActual
+   A=M
+   M=0
+   @posActual
+   M=M-1
+   @LOOP
+   0;JMP
+```
