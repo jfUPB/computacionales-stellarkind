@@ -1,4 +1,5 @@
 ## Solución a la primer actividad
+![image](../../../../assets/sc-u3-a1-i1.png)  
 - **Stop (_cuadrado rojo_):**  Detiene la ejecución del programa en cualquier momento.
     - **Ejemplo:** Estás ejecutando paso a paso y te das cuenta de que el código entró en un bucle infinito, o simplemente has terminado de analizar lo que necesitabas. Presionas Stop y regresas al editor con la ejecución detenida.
 - **Restart (_flecha circular_):** Permite comenzar la depuración de nuevo sin tener que detener la ejecución y luego darle a “Start” otra vez.
