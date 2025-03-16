@@ -5,26 +5,25 @@ R/ Se van a modificar las variables b y c dado que para los dos estás modifican
     - a = 10   
     - b = 15  
     - c = 15  
-- Llamando a modificarPorValor(a)  
-    Dentro de la función:    
-    - “Dentro de modificarPorValor, valor inicial: 10”  
-    - El valor se modifica localmente a 15 (n += 5), por lo que imprime “Dentro de modificarPorValor, valor modificado: 15”.    
-    - Al regresar a main, a sigue valiendo 10, ya que solo se modificó la copia local. Por lo tanto:   
-      - “Después de modificarPorValor, valor de a: 10”  
-      - Llamando a modificarPorReferencia(b)
-      
-    Dentro de la función:
-    - “Dentro de modificarPorReferencia, valor inicial: 10”
-    - El valor se incrementa en 5, pasando a 15 (n += 5), así que imprime “Dentro de modificarPorReferencia, valor modificado: 15”.
-    - Al regresar a main, b cambia a 15, porque fue pasado por referencia (se modificó el original). Por lo tanto:
-    - “Después de modificarPorReferencia, valor de b: 15”
-- Llamando a modificarPorPuntero(&c)
-    Dentro de la función:
-    - “Dentro de modificarPorPuntero, valor inicial: 10”
-    - El valor apuntado por n se incrementa en 5, pasando a 15 (*n += 5), así que imprime “Dentro de modificarPorPuntero, valor modificado: 15”.
-    - Al regresar a main, c cambia a 15, porque la función recibió la dirección de c y lo modificó directamente en memoria. Por lo tanto:
-    - “Después de modificarPorPuntero, valor de c: 15”
-## ¿Qué diferencias observas en el comportamiento de a, b y c tras cada llamada?
+- Llamando a modificarPorValor(a)   
+    - Dentro de la función:  
+        - “Dentro de modificarPorValor, valor inicial: 10”   
+        - El valor se modifica localmente a 15 (n += 5), por lo que imprime “Dentro de modificarPorValor, valor modificado: 15”.   
+    - Al regresar a main, a sigue valiendo 10, ya que solo se modificó la copia local. Por lo tanto:  
+        - “Después de modificarPorValor, valor de a: 10”  
+- Llamando a modificarPorReferencia(b)  
+    - Dentro de la función:  
+        - “Dentro de modificarPorReferencia, valor inicial: 10”  
+        - El valor se incrementa en 5, pasando a 15 (n += 5), así que imprime “Dentro de modificarPorReferencia, valor modificado: 15”.  
+    - Al regresar a main, b cambia a 15, porque fue pasado por referencia (se modificó el original). Por lo tanto:  
+        - “Después de modificarPorReferencia, valor de b: 15”  
+- Llamando a modificarPorPuntero(&c)   
+    - Dentro de la función:   
+        - “Dentro de modificarPorPuntero, valor inicial: 10”  
+        - El valor apuntado por n se incrementa en 5, pasando a 15 (*n += 5), así que imprime “Dentro de modificarPorPuntero, valor modificado: 15”.  
+    - Al regresar a main, c cambia a 15, porque la función recibió la dirección de c y lo modificó directamente en memoria. Por lo tanto:  
+        - “Después de modificarPorPuntero, valor de c: 15”  
+## ¿Qué diferencias observas en el comportamiento de a, b y c tras cada llamada?  
 R/ a (pasado por valor) permanece con el valor original (10) después de la llamada a la función, b (pasado por referencia) se modifica a 15 después de la llamada, pues la función altera directamente el valor origina y YA c (pasado por puntero) tammbién se modifica a 15 después de la llamada, puesto que la función recibe la dirección de c y cambia el valor que allí se almacena.  
 ## ¿Por qué ocurre esta diferencia?
 R/ Básicamente por cómo se gestiona la memoria y si se está trabajando con una copia o con la dirección/alias de la variable original. Por eso b y c cambian después de las llamadas, mientras que a permanece con su valor inicial.  
