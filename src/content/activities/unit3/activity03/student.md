@@ -1,7 +1,7 @@
 ## Solución a la tercer actividad:
 ### Captura de pantalla con el resultado de la ejecución del programa:  
 
-
+![image](../../../../assets/sc-u3-a3-i1.png)  
 
 <!DOCTYPE html>
 <html lang="es">
