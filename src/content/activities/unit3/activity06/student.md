@@ -12,5 +12,7 @@
   - **¿Qué diferencias notas entre el comportamiento y la gestión del Heap en comparación con el Stack?**
     - Comparado con el stack, el heap permite reservar memoria de forma manual con ```new``` (liberándola con ```delete```), mientras que el stack se gestiona automáticamente al entrar y salir de lasfunciones.
     - Las variables en stack se crean y destruyen automáticamente, por el contrario en heap se tiene la responsabilidad directa de asignar y liberar memoria, y las variables permanecen activas hasta que explícitamente se liberan. Aparte la memoria heap es másamplia, pero su mala gestión da muchos errores.
-  - **¿Qué consecuencias tendría no liberar la memoria reservada con new?**
+  - **¿Qué consecuencias tendría no liberar la memoria reservada con ```new```?**
     Si no se libera la memoria, la memoria reservada se queda ocupada hasta que programa termina, consumiendo recursos innecesariamente. En programas pesados esto puede agotar los recursos disponibles del sistema.
+  - **¿Por qué es importante usar ```delete[]``` al liberar memoria asignada para un arreglo?**
+    Cuando se ocupa la memoriapara arreglos con ```new```, siempre se debe usar ```delete[]``` para liberarla porque este indica al sistema que debe liberar toda la memoria reservada para un arreglo completo, llamando internamente al destructor de cada elemento si fuera necesario. Que no se confunda con el simple ```delete``` que solo libera la memoria del  primer elemento del arreglo.
