@@ -132,7 +132,7 @@ Incluye:
 Incluye:
 - La variable miembro estática ```Cuenta::totalCuentas```. Como se inicializa a 0 (```int Cuenta::totalCuentas = 0;```), por lo general reside aquí.
 
-4. **Segmento de Stack (Pila):** Se utiliza para almacenar variables locales dentro de las funciones, parámetros de función, direcciones de retorno de llamadas a funciones y, en C++, objetos creados directamente sin ```new```.
+4. **Segmento de Stack:** Se utiliza para almacenar variables locales dentro de las funciones, parámetros de función, direcciones de retorno de llamadas a funciones y, en C++, objetos creados directamente sin ```new```.  
 Durante la ejecución de ```main```, incluye:
 - La variable local ```cuentaStack```. Dado que es un objeto completo en la pila, sus miembros de datos (```nombre```, ```saldo```) se almacenan dentro de este espacio en la pila.
 - La variable local ```saldoExtra```.
@@ -141,6 +141,6 @@ Durante la ejecución de ```main```, incluye:
 - El puntero local ```Cuenta* punteroCuentaHeap```.
 - Durante las llamadas a métodos (ej. ```cuentaStack.mostrar()```, ```cuentaStack.modificarSaldoValor(saldoExtra)```), los parámetros pasados (si se pasan por valor) y las variables locales de esos métodos, así como la dirección de retorno para volver a main, se colocan temporalmente en la pila. Cuando ```modificarSaldoValor``` se llama, el parámetro ```int nuevoSaldo``` se almacena en la pila dentro del marco de esa función.
 
-5. **Segmento de Heap (Montículo):** Se utiliza para la asignación dinámica de memoria en tiempo de ejecución, usando operadores como ```new``` y ```delete```. La gestión de esta memoria es responsabilidad del programador.
+5. **Segmento de Heap:** Se utiliza para la asignación dinámica de memoria en tiempo de ejecución, usando operadores como ```new``` y ```delete```. La gestión de esta memoria es responsabilidad del programador.  
 Incluye:
 - El bloque de memoria asignado por ```new Cuenta("Heap", 1000)```. Este bloque contiene los miembros de datos (```nombre```, ```saldo```) del objeto Cuenta que se crea dinámicamente. La dirección de inicio de este bloque es lo que se almacena en el puntero ```cuentaHeap``` (que está en la pila). Cuando se llama a ```delete cuentaHeap;```, este bloque de memoria se libera y vuelve a estar disponible para futuras asignaciones en el heap.
